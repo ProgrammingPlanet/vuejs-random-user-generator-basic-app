@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random User Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div id="app">
+        <!-- instead `v-bind:` we can use only `:` -->
+        <img v-bind:src="user.pic" v-bind:class="user.gender" v-bind:alt="`${user.firstname} ${user.lastname}`">
+        <h1>{{user.firstname}} {{user.lastname}}</h1>
+        <h3>{{user.email}}</h3>
+        <button v-bind:class="user.gender" v-on:click="newUser()">New Random User</button>
+    </div>
+
+    <script src="vue-3.0.11.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
